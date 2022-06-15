@@ -1,0 +1,24 @@
+.postItem {
+  border: 1px solid #222;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem #555;
+  padding: 0.5rem 1rem;
+  width: 40%;
+  margin: 1rem auto;
+}
+
+.comments {
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: unset;
+  border: unset;
+  font-size: 1rem;
+  color: cornflowerblue;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.comment {
+  margin: 1rem;
+  text-align: left;
+  border: 1px solid #888;
+  border-radius: 8px;
+}
+
+.body,
+.email {
+  padding: 0.5rem 1rem;
+}

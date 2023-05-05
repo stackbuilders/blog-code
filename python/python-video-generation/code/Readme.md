@@ -2,16 +2,12 @@
 
 This repository contains the sample code for the blog-post [Video Generation with Python](https://www.stackbuilders.com/blog/python-video-generation/) using Python’s [MoviePy][moviepy], [SciPy][scipy] and [ImageMagick][imagemagick] libraries. If you are looking for the original sample code that uses Python’s [Moviepy][moviepy] and [Gizeh][gizeh] libraries they are living in their own repo [here](https://github.com/stackbuilders/tutorials/tree/tutorials/tutorials/python/python-video-generation)
 
-To build and run this sample follow the instructions below to install requirements and set-up your python environment with pipenv.
 
 ---
 
-## Before Getting Started
+## Getting Started
 
-Make sure you have
-[Cairo](https://pycairo.readthedocs.io/en/latest/getting_started.html) installed
-locally if you want to run the script file `python_video_with_gize.py`. `Gizeh` lib requires it. Follow the instruction in the link.
-
+To build and run this sample follow the instructions below to install requirements and set-up your python environment with pipenv.
 
 ## Install ImageMagick
 
@@ -93,7 +89,7 @@ If not installed yet, run from the root of the project to install `pipenv`:
 ```bash
 $ pip install --user pipenv
 ```
-## Install dependencies
+## Install dependencies and generate video
 
 From root project directory run:
 
@@ -127,7 +123,7 @@ pipenv run python python_video.py
 
 To Disable it type `exit`
 
-### Troubleshooting
+## Troubleshooting
 
 If you encounter errors linking `ImageMagick` binaries like in this [issue 693](https://github.com/Zulko/moviepy/issues/693), it does not have the proper permission set.
 

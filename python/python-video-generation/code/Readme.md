@@ -1,5 +1,9 @@
 # Local environment set up
 
+This repository contains the sample code for the blog-post [Video Generation with Python](https://www.stackbuilders.com/blog/python-video-generation/) using Python’s [MoviePy][moviepy], [SciPy][scipy] and [ImageMagick][imagemagick] libraries. If you are looking for the original sample code that uses Python’s [Moviepy][moviepy] and [Gizeh][gizeh] libraries they are living in their own repo [here](https://github.com/stackbuilders/tutorials/tree/tutorials/tutorials/python/python-video-generation)
+
+To build and run this sample follow the instructions below to install requirements and set-up your python environment with pipenv.
+
 ---
 
 ## Before Getting Started

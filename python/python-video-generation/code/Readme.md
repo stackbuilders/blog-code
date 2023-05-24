@@ -1,6 +1,6 @@
 # Video Generation with Python
 
-This repository contains the sample code for the blog-post [Video Generation with Python](https://www.stackbuilders.com/blog/python-video-generation/) using Python’s [MoviePy][moviepy], [SciPy][scipy] and [ImageMagick][imagemagick] libraries. If you are looking for the original sample code that uses Python’s [Moviepy][moviepy] and [Gizeh][gizeh] libraries they are living in their own repo [here](https://github.com/stackbuilders/tutorials/tree/tutorials/tutorials/python/python-video-generation)
+This repository contains the sample code for the blog-post [Video Generation with Python][blogpost-url] using Python’s [MoviePy][moviepy], [SciPy][scipy] and [ImageMagick][imagemagick] libraries. If you are looking for the original sample code that uses Python’s [MoviePy][moviepy] and [Gizeh][gizeh] libraries you can find it in its own [repository][original-sample].
 
 
 ---
@@ -11,9 +11,9 @@ To build and run this sample follow the instructions below to install requiremen
 
 ## Install ImageMagick
 
-ImageMagick is required to run `python_video.py` for creating `Moviepy` [`TextClip`s](https://moviepy-tburrows13.readthedocs.io/en/improve-docs/ref/VideoClip/TextClip.html#textclip).
+ImageMagick is required to run `python_video.py` for creating `Moviepy` [TextClips][txtclip].
 
-You can download the source binaries [here](https://imagemagick.org/script/download.php) and follow your development environment section to install from source. Otherwise, you can use a system package manager for the desired OS as follows.
+You can download the source binaries in the [download page][imagemagick-download] and follow your development environment section to install from source. Otherwise, you can use a system package manager for the desired OS as follows.
 
 To verify ImageMagick installation you can run the following command that will create a gif file.
 ```bash
@@ -27,7 +27,7 @@ $ sudo apt install imagemagick
 ```
 
 ### MacOS
-Using [Homebrew](https://brew.sh/) which provides pre-built binaries for Mac, type:
+Using [Homebrew][homebrew] which provides pre-built binaries for Mac, type:
 ```bash
 $ brew install imagemagick
 ```
@@ -37,15 +37,15 @@ $ brew install ghostscript
 ```
 
 ### Windows
-The Windows version of ImageMagick is self-installing. Simply go to the [download page](https://imagemagick.org/script/download.php) to get a version that will launch itself and ask a few installation questions.
+The Windows version of ImageMagick is self-installing. Simply go to the [download page][imagemagick-download] to get a version that will launch itself and ask a few installation questions.
 
 ## Install Python 3
 
 ### Linux and OSX
 
-Using version manager [asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm):
+Using version manager [asdf-vm][asdf-vm].
 
-##### Install [Python Plugin](https://github.com/danhper/asdf-python):
+##### Install [Python Plugin][asdf-python]:
 
 ```bash
 $ asdf plugin-add python https://github.com/danhper/asdf-python.git
@@ -76,7 +76,7 @@ brew install python3
 
 ### Windows
 
-Using package manager [Chocolatey](https://chocolatey.org/)
+Using package manager [Chocolatey][chocolatey]:
 
 ```bash
 C:\> choco install python3
@@ -99,7 +99,7 @@ $ pipenv install
 
 ### Enable your virtual environment
 
-From root project folder, enable virtual env typing
+From root project folder, enable virtual env typing:
 
 ```bash
 pipenv shell
@@ -107,7 +107,7 @@ pipenv shell
 
 ### To generate the video
 
-With pipenv virtualenv enabled and from the root project folder run
+With pipenv virtualenv enabled and from the root project folder run:
 
 ```bash
 python moviepy_video.py
@@ -125,7 +125,7 @@ To Disable it type `exit`
 
 ## Troubleshooting
 
-If you encounter errors linking `ImageMagick` binaries like in this [issue 693](https://github.com/Zulko/moviepy/issues/693), it does not have the proper permission set.
+If you encounter errors when linking `ImageMagick` binaries like in this known [issue 693][issue-693], it does not have the proper permission set.
 
 Check for the ImageMagick policy file at
 `/etc/ImageMagick-6/policy.xml` and comment out (or remove the line that reads)
@@ -136,3 +136,17 @@ Check for the ImageMagick policy file at
 ```
 <!-- <policy domain="path" rights="none" pattern="@*" /> -->
 ```
+
+[moviepy]: https://zulko.github.io/moviepy/
+[scipy]: https://scipy.org/
+[imagemagick]: https://imagemagick.org/
+[gizeh]: https://github.com/Zulko/Gizeh/
+[blogpost-url]: https://www.stackbuilders.com/blog/python-video-generation
+[original-sample]: https://github.com/stackbuilders/tutorials/tree/tutorials/tutorials/python/python-video-generation
+[txtclip]: https://moviepy-tburrows13.readthedocs.io/en/improve-docs/ref/VideoClip/TextClip.html#textclip
+[imagemagick-download]: https://imagemagick.org/script/download.php
+[homebrew]: https://brew.sh/
+[asdf-vm]: https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
+[asdf-python]: https://github.com/danhper/asdf-python
+[chocolatey]: https://chocolatey.org/
+[issue-693]: https://github.com/Zulko/moviepy/issues/693

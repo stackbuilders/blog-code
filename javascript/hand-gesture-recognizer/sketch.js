@@ -7,9 +7,9 @@ let imgList = [];
 
 function preload() {
   srcThumbsUp = loadImage("images/ok.png");
-  srcHorns = loadImage("images/horns.png")
-  srcOk = loadImage("images/perfecto.png")
-  srcStop = loadImage("images/adios.png")
+  srcHorns = loadImage("images/awesome.png")
+  srcOk = loadImage("images/perfect.png")
+  srcStop = loadImage("images/goodbye.png")
   imgList.push(getImageWithSource(srcThumbsUp), getImageWithSource(srcHorns), getImageWithSource(srcOk),
   getImageWithSource(srcStop));
 }

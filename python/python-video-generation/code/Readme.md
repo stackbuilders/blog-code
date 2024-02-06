@@ -105,12 +105,20 @@ From root project folder, enable virtual env typing:
 pipenv shell
 ```
 
+### On Mac M1
+Install required library for Moviepy
+```bash
+brew install ffmpeg
+```
+
+
+
 ### To generate the video
 
 With pipenv virtualenv enabled and from the root project folder run:
 
 ```bash
-python moviepy_video.py
+python python_video.py
 ```
 
 **Note:** It's possible to execute the script directly with `pipenv` using:

@@ -200,10 +200,10 @@ updateDisplay display value =
 renderWindow :: IO Window
 renderWindow = do
   window <- windowNew
-  set window [ windowTitle         := "Hello World"
+  set window [ windowTitle         := "Calculator"
              , windowResizable     := False
              , windowDefaultWidth  := 230
-             , windowDefaultHeight := 150 ]
+             , windowDefaultHeight := 250 ]
   pure window
 
 -- | Create a new display with default settings.

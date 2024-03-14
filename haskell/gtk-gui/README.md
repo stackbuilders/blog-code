@@ -8,6 +8,8 @@ This project serves as a companion codebase for Stack Builder's blog post ["Crea
 
 For installation instructions of C libraries required by Gtk2Hs and haskell-gi, please refer to the [Gtk2Hs Github Repository](https://github.com/gtk2hs/gtk2hs?tab=readme-ov-file#installing-c-libraries). The installation process may vary depending on your operating system, so make sure to follow the instructions specific to your platform.
 
+**WARNING**: This setup is incompatible with ARM architectures.
+
 ## Building and Running the Project
 
 1. **Clone the Repository**: Clone this repository to your local machine and navigate to the project directory.

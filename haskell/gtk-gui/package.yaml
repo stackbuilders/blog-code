@@ -14,10 +14,12 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - gtk3 >= 0.15.8 && < 0.15.9
-- alex
-- happy
-- haskell-gi
-- gtk2hs-buildtools
+
+build-tools:
+- alex >= 3.3.0 && < 3.3.1
+- happy >= 1.20.1.1 && < 1.20.2
+- haskell-gi >= 0.26.7 && < 0.26.8
+- gtk2hs-buildtools >= 0.13.10 && < 0.13.11
 
 library:
   source-dirs: src

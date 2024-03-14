@@ -1,15 +1,25 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.36.0.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 
 name:           gtk-gui
 version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/gtk-gui#readme>
+homepage:       https://github.com/stackbuilders/blog-code#readme
+bug-reports:    https://github.com/stackbuilders/blog-code/issues
+author:         Mark Karpov
+maintainer:     jgalarza@stackbuilders.com
+copyright:      2016 Mark Karpov
+license:        BSD-3-Clause
+build-type:     Simple
+extra-source-files:
+    README.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/gtk-gui
+  location: https://github.com/stackbuilders/blog-code
 
 library
   exposed-modules:
@@ -20,9 +30,15 @@ library
       Paths_gtk_gui
   hs-source-dirs:
       src
+  build-tools:
+      alex ==3.3.0.*
+    , happy >=1.20.1.1 && <1.20.2
+  build-tool-depends:
+      gtk2hs-buildtools:gtk2hs-buildtools ==0.13.10.*
+    , haskell-gi:haskell-gi ==0.26.7.*
   build-depends:
-      base >=4.7 && <5,
-      gtk3
+      base >=4.7 && <5
+    , gtk3 ==0.15.8.*
   default-language: Haskell2010
 
 executable gtk-gui-exe
@@ -33,7 +49,14 @@ executable gtk-gui-exe
       Paths_gtk_gui
   hs-source-dirs:
       app
+  build-tools:
+      alex ==3.3.0.*
+    , happy >=1.20.1.1 && <1.20.2
+  build-tool-depends:
+      gtk2hs-buildtools:gtk2hs-buildtools ==0.13.10.*
+    , haskell-gi:haskell-gi ==0.26.7.*
   build-depends:
       base >=4.7 && <5
     , gtk-gui
+    , gtk3 ==0.15.8.*
   default-language: Haskell2010

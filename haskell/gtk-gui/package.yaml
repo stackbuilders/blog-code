@@ -9,8 +9,6 @@ copyright:           "2016 Mark Karpov"
 extra-source-files:
 - README.md
 
-description:         Please see the README on GitHub at <https://github.com/githubuser/gtk-gui#readme>
-
 dependencies:
 - base >= 4.7 && < 5
 - gtk3 >= 0.15.8 && < 0.15.9

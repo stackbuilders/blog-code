@@ -61,6 +61,10 @@ def get_all():
 def get_unread():
     return db.session.query(Notification).filter(Notification.read.is_(False)).all()
 
+reveal_type(get_all)
+
+reveal_type(get_unread)
+
 
 @app.route("/", methods=["GET"])
 def root():

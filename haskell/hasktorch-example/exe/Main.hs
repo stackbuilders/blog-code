@@ -111,9 +111,7 @@ main = do
   args :: [String] <- getArgs
   deviceStr <- try (getEnv "DEVICE") :: IO (Either SomeException String)
   let
-      dataPath :: String = "./data" -- case args of
-        --[] -> error $ "No data path provided"
-        --_ -> head args
+      dataPath :: String = "./mnist" 
   case deviceStr of
     Right "cpu" -> train' @'( 'CPU, 0) dataPath 
     Right "cuda:0" -> train' @'( 'CUDA, 0) dataPath

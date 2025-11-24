@@ -8,3 +8,5 @@ result*
 *.lock
 **/.DS_Store
 *.pt
+data/
+mnist/

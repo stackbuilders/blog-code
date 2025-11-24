@@ -9,11 +9,15 @@ Steps to run it locally.
 ```sh
 nix develop
 ```
-2. build 
+2. Get mnist dataset by running the download-mnist.sh script.
+```
+./download-mnist.sh
+```
+3. build 
 ```sh
 cabal build
 ```
-3. run (model will be saved inot static-mnist-cnn.pt file)
+4. run (model will be saved inot static-mnist-cnn.pt file)
 ```sh 
 cabal run
 ```

@@ -1,0 +1,22 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: https://github.com/AccelerateHS/accelerate.git
+  tag: master
+
+source-repository-package
+  type: git
+  location: https://github.com/AccelerateHS/accelerate-llvm.git
+  tag: master
+  -- This tells Cabal to look inside these specific folders for the .cabal files
+  subdir:
+    accelerate-llvm
+    accelerate-llvm-native
+
+allow-newer:
+  *:bytestring,
+  *:base,
+  *:template-haskell,
+  llvm-hs:llvm-hs-pure,
+  llvm-hs-pure:base

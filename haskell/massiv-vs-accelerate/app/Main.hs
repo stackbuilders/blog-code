@@ -110,7 +110,7 @@ runStencilBenchmarks = do
                 nf (M.computeAs M.P . M.mapStencil (M.Fill 0.0) massivMeanStencil) mArr,
             
             bench "Accelerate (LLVM Stencil)" $ 
-                whnf (Native.run . A.stencil accelMeanStencil A.clamp . A.use) aArr
+                nf (Native.run . A.stencil accelMeanStencil A.clamp . A.use) aArr
         ]
       ]
 

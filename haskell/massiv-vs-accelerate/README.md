@@ -48,7 +48,7 @@ docker run --rm massiv-vs-accelerate stencil-massiv +RTS -s
 
 ```
 
-4. **Manual Setup (Without Docker)**
+4. **Manual Setup (Without Docker on Mac)**
 Configure dependencies:
 
 Ensure llvm-15 toolchains are [globally](https://www.acceleratehs.org/get-started.html) exposed on your machine.

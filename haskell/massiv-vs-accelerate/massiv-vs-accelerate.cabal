@@ -84,7 +84,6 @@ executable massiv-vs-accelerate
                     -rtsopts
                     -with-rtsopts=-N
                     -fllvm
-                    -optlo-O3
                     -fno-liberate-case
                     -funfolding-use-threshold=100
-                    -funfolding-keeness-factor=100
+                    -pgma clang

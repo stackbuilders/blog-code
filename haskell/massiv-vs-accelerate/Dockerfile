@@ -15,6 +15,8 @@ RUN wget https://apt.llvm.org/llvm.sh \
     && chmod +x llvm.sh \
     && ./llvm.sh 15 \
     && apt-get install -y \
+       llvm \
+       clang \
        llvm-15-dev \
        libffi-dev \
        libedit-dev \
@@ -26,12 +28,31 @@ RUN wget https://apt.llvm.org/llvm.sh \
     && rm -rf /var/lib/apt/lists/*
 
 # THE FIXES:
-# 1. Create the symlink so 'clang' exists in the PATH
-RUN ln -s /usr/bin/clang-15 /usr/bin/clang
+# 1. Create the symlinks so GHC and Accelerate tools exist cleanly in the PATH
+# We use -sf to force overwrite existing default paths safely
+RUN ln -sf /usr/bin/clang-15 /usr/bin/clang && \
+    ln -sf /usr/bin/opt-15 /usr/bin/opt && \
+    ln -sf /usr/bin/llc-15 /usr/bin/llc && \
+    ln -sf /usr/bin/llvm-config-15 /usr/bin/llvm-config
 
 # 2. Set the environment variables globally for the container
-ENV LLVM_CONFIG=/usr/bin/llvm-config-15
-ENV ACCELERATE_LLVM_CLANG_PATH=/usr/bin/clang-15
+ENV LLVM_CONFIG=/usr/bin/llvm-config
+ENV ACCELERATE_LLVM_CLANG_PATH=/usr/bin/clang
 
+# Set up the working directory inside the container
 WORKDIR /app
+
+# Update the package list
 RUN cabal update
+
+# Copy the cabal configuration first to cache dependencies (optimization step)
+COPY *.cabal cabal.project /app/
+
+# Copy the rest of the application source files
+COPY . /app
+
+# Pre-compile the project inside the container image
+RUN cabal build
+
+# Set the default entry point to execute your compiled benchmark suite
+ENTRYPOINT ["cabal", "run", "massiv-vs-accelerate", "--"]

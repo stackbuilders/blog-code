@@ -3,12 +3,12 @@ packages: .
 source-repository-package
   type: git
   location: https://github.com/AccelerateHS/accelerate.git
-  tag: master
+  tag: 981db031c7573bd38decbf3c123769a051ce9f32
 
 source-repository-package
   type: git
   location: https://github.com/AccelerateHS/accelerate-llvm.git
-  tag: master
+  tag: 1b3acb629cf90b0fbcecb985e4349c3055d70ee2
   -- This tells Cabal to look inside these specific folders for the .cabal files
   subdir:
     accelerate-llvm
